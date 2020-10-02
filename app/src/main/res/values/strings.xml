@@ -2,6 +2,7 @@
     <string name="app_name">Image Search App</string>
     <string name="username" translatable="false">username</string>
     <string name="retry" translatable="false">Retry</string>
+    <string name="search" translatable="false">Search</string>
     <string name="loading_exception" translatable="false">Results could not be loaded</string>
     <string name="results_not_found" translatable="false">No results found for this query</string>
 </resources>
