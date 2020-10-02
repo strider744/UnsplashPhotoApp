@@ -1,4 +1,4 @@
-package com.strider.imagesearchapp
+package com.strider.imagesearchapp.data
 
 import android.os.Parcelable
 import kotlinx.android.parcel.Parcelize
