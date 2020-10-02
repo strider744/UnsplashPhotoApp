@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/item_photo_height">
+
+    <ImageView
+        android:id="@+id/image_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <View
+        style="@style/style_photo_gradient"
+        android:background="@drawable/gradient"/>
+
+    <TextView
+        android:id="@+id/tv_username"
+        style="@style/style_tv_item_photo"
+        tools:text="@string/username" />
+
+</RelativeLayout>

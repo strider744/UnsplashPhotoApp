@@ -1,4 +1,4 @@
-package com.codinginflow.imagesearchapp
+package com.strider.imagesearchapp
 
 import org.junit.Test
 

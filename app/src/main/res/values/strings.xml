@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">Image Search App</string>
+    <string name="username" translatable="false">username</string>
+    <string name="retry" translatable="false">Retry</string>
+    <string name="loading_exception" translatable="false">Results could not be loaded</string>
 </resources>

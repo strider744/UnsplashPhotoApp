@@ -7,4 +7,23 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="style_photo_gradient">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/item_photo_gradient_height</item>
+        <item name="android:layout_alignBottom">@id/image_view</item>
+    </style>
+
+    <style name="style_tv_item_photo">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_alignBottom">@id/image_view</item>
+        <item name="android:layout_margin">@dimen/margin_8dp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:drawablePadding">@dimen/margin_4dp</item>
+        <item name="android:textColor">@color/color_white</item>
+        <item name="drawableStartCompat">@drawable/ic_user</item>
+    </style>
+
 </resources>
