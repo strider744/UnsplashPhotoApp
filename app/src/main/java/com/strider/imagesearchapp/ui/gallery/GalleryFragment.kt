@@ -20,12 +20,12 @@ class GalleryFragment : Fragment(R.layout.fragment_gallery) {
         super.onViewCreated(view, savedInstanceState)
 
         _binding = FragmentGalleryBinding.bind(view)
+
         val adapter = PhotoAdapter()
 
         binding.apply {
             recyclerView.setHasFixedSize(true)
             recyclerView.adapter = adapter
-
         }
 
         viewModel.photos.observe(viewLifecycleOwner) {

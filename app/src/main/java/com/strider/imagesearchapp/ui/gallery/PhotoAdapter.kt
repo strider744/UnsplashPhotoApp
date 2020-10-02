@@ -15,7 +15,6 @@ class PhotoAdapter : PagingDataAdapter<Photo, PhotoAdapter.PhotoViewHolder>(PHOT
 
     companion object {
         private val PHOTO_COMPARATOR = object : DiffUtil.ItemCallback<Photo>() {
-
             override fun areItemsTheSame(oldItem: Photo, newItem: Photo) =
                 oldItem.id == newItem.id
 
@@ -27,13 +26,14 @@ class PhotoAdapter : PagingDataAdapter<Photo, PhotoAdapter.PhotoViewHolder>(PHOT
     override fun onBindViewHolder(holder: PhotoViewHolder, position: Int) {
         val currentItem = getItem(position)
 
-        currentItem?.let {
-            holder.bind(it)
+        if (currentItem != null) {
+            holder.bind(currentItem)
         }
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PhotoViewHolder {
-        val binding = ItemPhotoBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        val binding =
+            ItemPhotoBinding.inflate(LayoutInflater.from(parent.context), parent, false)
 
         return PhotoViewHolder(binding)
     }
@@ -42,7 +42,6 @@ class PhotoAdapter : PagingDataAdapter<Photo, PhotoAdapter.PhotoViewHolder>(PHOT
         RecyclerView.ViewHolder(binding.root) {
 
         fun bind(photo: Photo) {
-
             binding.apply {
                 Glide.with(itemView)
                     .load(photo.urls.regular)
