@@ -1,4 +1,4 @@
-package com.strider.imagesearchapp.ui.gallery
+package com.strider.unsplashphotoviewerapp.ui.gallery
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -7,11 +7,11 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
-import com.strider.imagesearchapp.R
-import com.strider.imagesearchapp.data.Photo
-import com.strider.imagesearchapp.databinding.ItemPhotoBinding
+import com.strider.unsplashphotoviewerapp.R
+import com.strider.unsplashphotoviewerapp.data.Photo
+import com.strider.unsplashphotoviewerapp.databinding.ItemPhotoBinding
 
-class PhotoAdapter(private val listener: PhotoAdapter.OnItemClickListener) :
+class PhotoAdapter(private val listener: OnItemClickListener) :
     PagingDataAdapter<Photo, PhotoAdapter.PhotoViewHolder>(PHOTO_COMPARATOR) {
 
     companion object {

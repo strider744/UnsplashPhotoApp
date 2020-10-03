@@ -1,4 +1,4 @@
-package com.strider.imagesearchapp
+package com.strider.unsplashphotoviewerapp
 
 import android.app.Application
 import dagger.hilt.android.HiltAndroidApp

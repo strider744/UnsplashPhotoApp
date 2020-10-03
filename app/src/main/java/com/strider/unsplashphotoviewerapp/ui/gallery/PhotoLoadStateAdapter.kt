@@ -1,4 +1,4 @@
-package com.strider.imagesearchapp.ui.gallery
+package com.strider.unsplashphotoviewerapp.ui.gallery
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -6,7 +6,7 @@ import androidx.core.view.isVisible
 import androidx.paging.LoadState
 import androidx.paging.LoadStateAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.strider.imagesearchapp.databinding.PhotoLoadStateFooterBinding
+import com.strider.unsplashphotoviewerapp.databinding.PhotoLoadStateFooterBinding
 
 class PhotoLoadStateAdapter(private val retry: () -> Unit) :
     LoadStateAdapter<PhotoLoadStateAdapter.LoadStateViewHolder>() {
@@ -41,7 +41,5 @@ class PhotoLoadStateAdapter(private val retry: () -> Unit) :
                 tvError.isVisible = loadState !is LoadState.Loading
             }
         }
-
     }
-
 }

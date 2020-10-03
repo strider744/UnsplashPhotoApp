@@ -1,4 +1,4 @@
-package com.strider.imagesearchapp.data
+package com.strider.unsplashphotoviewerapp.data
 
 import android.os.Parcelable
 import kotlinx.android.parcel.Parcelize

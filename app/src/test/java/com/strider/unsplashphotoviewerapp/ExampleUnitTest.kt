@@ -1,4 +1,4 @@
-package com.strider.imagesearchapp
+package com.strider.unsplashphotoviewerapp
 
 import org.junit.Test
 

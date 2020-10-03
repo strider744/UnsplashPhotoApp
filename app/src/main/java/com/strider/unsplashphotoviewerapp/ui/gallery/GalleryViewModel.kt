@@ -1,4 +1,4 @@
-package com.strider.imagesearchapp.ui.gallery
+package com.strider.unsplashphotoviewerapp.ui.gallery
 
 import androidx.hilt.lifecycle.ViewModelInject
 import androidx.lifecycle.MutableLiveData
@@ -6,7 +6,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.switchMap
 import androidx.lifecycle.viewModelScope
 import androidx.paging.cachedIn
-import com.strider.imagesearchapp.data.Repository
+import com.strider.unsplashphotoviewerapp.data.Repository
 
 class GalleryViewModel @ViewModelInject constructor(
     private val repository: Repository

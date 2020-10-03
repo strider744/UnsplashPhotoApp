@@ -1,6 +1,6 @@
-package com.strider.imagesearchapp.api
+package com.strider.unsplashphotoviewerapp.api
 
-import com.strider.imagesearchapp.BuildConfig
+import com.strider.unsplashphotoviewerapp.BuildConfig
 import retrofit2.http.GET
 import retrofit2.http.Headers
 import retrofit2.http.Query

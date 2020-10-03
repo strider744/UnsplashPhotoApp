@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/galleryFragment"
-        android:name="com.strider.imagesearchapp.ui.gallery.GalleryFragment"
+        android:name="com.strider.unsplashphotoviewerapp.ui.gallery.GalleryFragment"
         android:label="Gallery"
         tools:layout="@layout/fragment_gallery">
         <action
@@ -16,11 +16,11 @@
     </fragment>
     <fragment
         android:id="@+id/detailsFragment"
-        android:name="com.strider.imagesearchapp.ui.details.DetailsFragment"
+        android:name="com.strider.unsplashphotoviewerapp.ui.details.DetailsFragment"
         android:label="Photo"
         tools:layout="@layout/fragment_details">
         <argument
             android:name="photo"
-            app:argType="com.strider.imagesearchapp.data.Photo" />
+            app:argType="com.strider.unsplashphotoviewerapp.data.Photo" />
     </fragment>
 </navigation>

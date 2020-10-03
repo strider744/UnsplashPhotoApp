@@ -1,7 +1,7 @@
-package com.strider.imagesearchapp.di
+package com.strider.unsplashphotoviewerapp.di
 
-import com.strider.imagesearchapp.api.ServerApi
-import com.strider.imagesearchapp.api.ServerApi.Companion.BASE_URL
+import com.strider.unsplashphotoviewerapp.api.ServerApi
+import com.strider.unsplashphotoviewerapp.api.ServerApi.Companion.BASE_URL
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

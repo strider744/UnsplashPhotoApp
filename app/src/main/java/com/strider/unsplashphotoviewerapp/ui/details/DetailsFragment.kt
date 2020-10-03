@@ -1,4 +1,4 @@
-package com.strider.imagesearchapp.ui.details
+package com.strider.unsplashphotoviewerapp.ui.details
 
 import android.content.Intent
 import android.graphics.drawable.Drawable
@@ -13,8 +13,8 @@ import com.bumptech.glide.load.DataSource
 import com.bumptech.glide.load.engine.GlideException
 import com.bumptech.glide.request.RequestListener
 import com.bumptech.glide.request.target.Target
-import com.strider.imagesearchapp.R
-import com.strider.imagesearchapp.databinding.FragmentDetailsBinding
+import com.strider.unsplashphotoviewerapp.R
+import com.strider.unsplashphotoviewerapp.databinding.FragmentDetailsBinding
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint

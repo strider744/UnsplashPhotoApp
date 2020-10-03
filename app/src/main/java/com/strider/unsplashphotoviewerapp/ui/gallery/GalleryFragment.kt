@@ -1,4 +1,4 @@
-package com.strider.imagesearchapp.ui.gallery
+package com.strider.unsplashphotoviewerapp.ui.gallery
 
 import android.os.Bundle
 import android.view.Menu
@@ -10,9 +10,9 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import androidx.paging.LoadState
-import com.strider.imagesearchapp.R
-import com.strider.imagesearchapp.data.Photo
-import com.strider.imagesearchapp.databinding.FragmentGalleryBinding
+import com.strider.unsplashphotoviewerapp.R
+import com.strider.unsplashphotoviewerapp.data.Photo
+import com.strider.unsplashphotoviewerapp.databinding.FragmentGalleryBinding
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint

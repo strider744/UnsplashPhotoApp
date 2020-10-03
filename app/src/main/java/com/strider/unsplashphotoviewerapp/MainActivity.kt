@@ -1,9 +1,10 @@
-package com.strider.imagesearchapp
+package com.strider.unsplashphotoviewerapp
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
+import com.strider.unsplashphotoviewerapp.R
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint

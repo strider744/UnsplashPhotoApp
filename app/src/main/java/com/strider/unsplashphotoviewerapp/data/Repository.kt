@@ -1,9 +1,9 @@
-package com.strider.imagesearchapp.data
+package com.strider.unsplashphotoviewerapp.data
 
 import androidx.paging.Pager
 import androidx.paging.PagingConfig
 import androidx.paging.liveData
-import com.strider.imagesearchapp.api.ServerApi
+import com.strider.unsplashphotoviewerapp.api.ServerApi
 import javax.inject.Inject
 import javax.inject.Singleton
 

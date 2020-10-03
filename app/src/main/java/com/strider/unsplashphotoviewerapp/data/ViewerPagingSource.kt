@@ -1,7 +1,7 @@
-package com.strider.imagesearchapp.data
+package com.strider.unsplashphotoviewerapp.data
 
 import androidx.paging.PagingSource
-import com.strider.imagesearchapp.api.ServerApi
+import com.strider.unsplashphotoviewerapp.api.ServerApi
 import retrofit2.HttpException
 import java.io.IOException
 
