@@ -11,7 +11,8 @@ import com.strider.imagesearchapp.R
 import com.strider.imagesearchapp.data.Photo
 import com.strider.imagesearchapp.databinding.ItemPhotoBinding
 
-class PhotoAdapter : PagingDataAdapter<Photo, PhotoAdapter.PhotoViewHolder>(PHOTO_COMPARATOR) {
+class PhotoAdapter(private val listener: PhotoAdapter.OnItemClickListener) :
+    PagingDataAdapter<Photo, PhotoAdapter.PhotoViewHolder>(PHOTO_COMPARATOR) {
 
     companion object {
         private val PHOTO_COMPARATOR = object : DiffUtil.ItemCallback<Photo>() {
@@ -38,8 +39,19 @@ class PhotoAdapter : PagingDataAdapter<Photo, PhotoAdapter.PhotoViewHolder>(PHOT
         return PhotoViewHolder(binding)
     }
 
-    class PhotoViewHolder(private val binding: ItemPhotoBinding) :
+    inner class PhotoViewHolder(private val binding: ItemPhotoBinding) :
         RecyclerView.ViewHolder(binding.root) {
+
+        init {
+            binding.root.setOnClickListener {
+                val position = bindingAdapterPosition
+                if (position != RecyclerView.NO_POSITION) {
+                    getItem(position)?.let {
+                        listener.onItemClick(it)
+                    }
+                }
+            }
+        }
 
         fun bind(photo: Photo) {
             binding.apply {
@@ -53,5 +65,9 @@ class PhotoAdapter : PagingDataAdapter<Photo, PhotoAdapter.PhotoViewHolder>(PHOT
                 tvUsername.text = photo.user.username
             }
         }
+    }
+
+    interface OnItemClickListener {
+        fun onItemClick(photo: Photo)
     }
 }
