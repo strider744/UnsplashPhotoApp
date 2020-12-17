@@ -5,7 +5,7 @@ import retrofit2.http.GET
 import retrofit2.http.Headers
 import retrofit2.http.Query
 
-interface ServerApi {
+interface PhotoApi {
 
     companion object {
         const val BASE_URL = "https://api.unsplash.com/"
@@ -18,5 +18,5 @@ interface ServerApi {
         @Query("query") query: String,
         @Query("page") page: Int,
         @Query("per_page") perPage: Int
-    ) : ServerResponse
+    ) : SearchPhotoResponse
 }

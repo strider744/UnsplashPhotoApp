@@ -47,11 +47,23 @@ dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar"])
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlinVersion"
     implementation "androidx.core:core-ktx:$ktxVersion"
+    implementation "androidx.activity:activity-ktx:$ktxActivityVersion"
+    implementation "androidx.fragment:fragment-ktx:$ktxFragmentVersion"
     implementation "androidx.appcompat:appcompat:$appCompatVersion"
     implementation "androidx.constraintlayout:constraintlayout:$constraintLayoutVersion"
     testImplementation "junit:junit:$junitVersion"
     androidTestImplementation "androidx.test.ext:junit:$testExtJunitVersion"
     androidTestImplementation "androidx.test.espresso:espresso-core:$espressoVersion"
+
+    // room
+    implementation "androidx.room:room-ktx:$roomVersion"
+    implementation "androidx.room:room-runtime:$roomVersion"
+    kapt "androidx.room:room-compiler:$roomVersion"
+
+    // coroutines
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutinesVersion"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutinesVersion"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-rx3:$coroutinesVersion"
 
     // Navigation Component
     implementation "androidx.navigation:navigation-fragment-ktx:$navigationVersion"
@@ -66,12 +78,48 @@ dependencies {
     // Retrofit + GSON
     implementation "com.squareup.retrofit2:retrofit:$retrofitVersion"
     implementation "com.squareup.retrofit2:converter-gson:$retrofitVersion"
+    implementation "com.squareup.retrofit2:adapter-rxjava3:$retrofitVersion"
+
+    // Okhttp
+    implementation "com.squareup.okhttp3:logging-interceptor:$okhttp3Version"
 
     // Glide
     implementation "com.github.bumptech.glide:glide:$glideVersion"
 
     // Paging 3
     implementation "androidx.paging:paging-runtime:$pagingVersion"
+
+    // Kotlin + coroutines
+    implementation "androidx.work:work-runtime-ktx:$workVersion"
+
+    //RxAndroid, RxKotlin
+    implementation "io.reactivex.rxjava3:rxandroid:$rxAndroidVersion"
+    implementation "io.reactivex.rxjava3:rxjava:$rxJavaVersion"
+    implementation "io.reactivex.rxjava3:rxkotlin:$rxKotlinVersion"
+
+    // lifecycle
+    implementation "androidx.lifecycle:lifecycle-extensions:$lifecycleVersion"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-savedstate:$lifecycleVersion"
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycleVersion"
+    implementation "androidx.lifecycle:lifecycle-process:$lifecycleVersion"
+    implementation "androidx.lifecycle:lifecycle-common-java8:$lifecycleVersion"
+    implementation "androidx.lifecycle:lifecycle-reactivestreams:$lifecycleVersion"
+
+    //AutoDisposable Uber
+    implementation "com.uber.autodispose2:autodispose:$autodispose2Version"
+    implementation "com.uber.autodispose2:autodispose-lifecycle:$autodispose2Version"
+    implementation "com.uber.autodispose2:autodispose-android:$autodispose2Version"
+    implementation "com.uber.autodispose2:autodispose-androidx-lifecycle:$autodispose2Version"
+
+    // KotPref
+    implementation "com.chibatching.kotpref:kotpref:$kotPrefVersion"
+    implementation "com.chibatching.kotpref:livedata-support:$kotPrefVersion"
+
+    // Appctx
+    implementation("com.louiscad.splitties:splitties-appctx:$splittiesVersion")
+
+    // Timber
+    implementation "com.jakewharton.timber:timber:$timberVersion"
 }
 
 kapt {

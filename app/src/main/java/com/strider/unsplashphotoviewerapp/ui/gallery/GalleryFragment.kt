@@ -20,13 +20,12 @@ class GalleryFragment : Fragment(R.layout.fragment_gallery), PhotoAdapter.OnItem
 
     private val viewModel by viewModels<GalleryViewModel>()
 
-    private var _binding: FragmentGalleryBinding? = null
-    private val binding get() = _binding!!
+    private lateinit var binding: FragmentGalleryBinding
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        _binding = FragmentGalleryBinding.bind(view)
+        binding = FragmentGalleryBinding.bind(view)
 
         val adapter = PhotoAdapter(this)
 
@@ -40,7 +39,7 @@ class GalleryFragment : Fragment(R.layout.fragment_gallery), PhotoAdapter.OnItem
             buttonRetry.setOnClickListener { adapter.retry() }
         }
 
-        viewModel.photos.observe(viewLifecycleOwner) {
+        viewModel.photos.observe(viewLifecycleOwner) { it ->
             adapter.submitData(viewLifecycleOwner.lifecycle, it)
         }
 
@@ -91,10 +90,5 @@ class GalleryFragment : Fragment(R.layout.fragment_gallery), PhotoAdapter.OnItem
     override fun onItemClick(photo: Photo) {
         val action = GalleryFragmentDirections.actionGalleryToDetails(photo)
         findNavController().navigate(action)
-    }
-
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
     }
 }

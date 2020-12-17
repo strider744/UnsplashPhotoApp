@@ -21,18 +21,19 @@ import dagger.hilt.android.AndroidEntryPoint
 class DetailsFragment : Fragment(R.layout.fragment_details) {
 
     private val args by navArgs<DetailsFragmentArgs>()
+    private lateinit var binding: FragmentDetailsBinding
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val binding = FragmentDetailsBinding.bind(view)
+        binding = FragmentDetailsBinding.bind(view)
 
         binding.apply {
             val photo = args.photo
 
             Glide
                 .with(this@DetailsFragment)
-                .load(photo.urls.full)
+                .load(photo.urls.regular)
                 .error(R.drawable.ic_error)
                 .listener(object : RequestListener<Drawable> {
                     override fun onLoadFailed(
@@ -59,6 +60,7 @@ class DetailsFragment : Fragment(R.layout.fragment_details) {
                     }
                 })
                 .into(imageView)
+
 
             tvDescription.text = photo.description
 
